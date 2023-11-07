@@ -7,16 +7,11 @@ import ru.lysakov.lab2.model.Response;
 import java.util.UUID;
 
 @Service
-@Qualifier("ModifyOperationUidResponseService")
-public class ModifyOperationUidResponseService
-        implements ModifyResponseService {
+public class ModifyOperationUidResponseService implements ModifyResponseService {
     @Override
-    public Response modify(Response response){
+    public Response modify(Response response) {
         UUID uuid = UUID.randomUUID();
-
         response.setOperationUid(uuid.toString());
-
         return response;
     }
-
 }
